@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Supermercado</a></li>
+                <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Supermercado</h1>
+    <div class="productos">
+        <div class="producto">
+            <img src="img/arroz.jpg" alt="Arroz">
+            <h2>Arroz</h2>
+            <p>Q10</p>
+            <button onclick="agregarAlCarrito('Arroz', 10)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/azucar.jpg" alt="Azúcar">
+            <h2>Azúcar</h2>
+            <p>Q8</p>
+            <button onclick="agregarAlCarrito('Azúcar', 8)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/aceite.jpg" alt="Aceite">
+            <h2>Aceite</h2>
+            <p>Q25</p>
+            <button onclick="agregarAlCarrito('Aceite', 25)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/aceite.jpg" alt="Aceite">
+            <h2>Aceite</h2>
+            <p>Q25</p>
+            <button onclick="agregarAlCarrito('Aceite', 25)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            alert(nombre + " agregado al carrito.");
+        }
+    </script>
+</body>
+</html>

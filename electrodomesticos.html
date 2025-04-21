@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrodomésticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Supermercado</a></li>
+                <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Electrodomésticos</h1>
+    <div class="productos">
+        <div class="producto">
+            <img src="img/lavadora.jpg" alt="Lavadora">
+            <h2>Lavadora</h2>
+            <p>Q2500</p>
+            <button onclick="agregarAlCarrito('Lavadora', 2500)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/refrigerador.jpg" alt="Refrigerador">
+            <h2>Refrigerador</h2>
+            <p>Q4800</p>
+            <button onclick="agregarAlCarrito('Refrigerador', 4800)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="img/microondas.jpg" alt="Microondas">
+            <h2>Microondas</h2>
+            <p>Q1200</p>
+            <button onclick="agregarAlCarrito('Microondas', 1200)">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            alert(nombre + " agregado al carrito.");
+        }
+    </script>
+</body>
+</html>
+

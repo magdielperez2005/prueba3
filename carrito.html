@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Supermercado</a></li>
+            <li><a href="electrodomesticos.html">Electrodomésticos</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+        </ul>
+    </nav>
+    <h2>Carrito de Compras</h2>
+    <div id="lista-carrito"></div>
+    <h3>Total: Q<span id="total">0</span></h3>
+    <form onsubmit="finalizarCompra(event)">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="number" id="telefono" placeholder="Teléfono" required>
+        <input type="text" id="direccion" placeholder="Dirección" required>
+        <button type="submit">Finalizar Compra</button>
+    </form>
+</body>
+</html>
